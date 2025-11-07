@@ -1,0 +1,60 @@
+.layout{
+    padding: 0 4rem;
+}
+.card{
+    border: 1px solid var(--dark-1);
+    border-radius: 10px;
+}
+.social-icon{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(var(--yellow-1), var(--yellow-2));
+}
+/* For calendar */
+abbr[title]{
+    text-decoration: none !important;
+}
+.react-calendar__tile--active{
+    background: linear-gradient(var(--yellow-1),var(--yellow-2)) !important;
+}
+.react-calendar__month-view__days__day--weekend {
+  color: inherit !important;     
+  background: inherit !important; 
+  font-weight: normal !important; 
+}
+.react-calendar__navigation button:enabled:hover, .react-calendar__navigation button:enabled:focus {
+    /* border: 1px solid var(--dark-1); */
+    background-color: var(--light) !important;
+}
+.react-calendar__navigation {
+    background: linear-gradient(var(--yellow-1),var(--yellow-2)) !important;
+    padding: 5px 0;
+    height: 60px !important;
+}
+/* For Navigation */
+.circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background:  var(--grey-4);
+}
+.steps .active .circle{
+    background: linear-gradient(var(--yellow-1),var(--yellow-2));
+}
+.steps span{
+    color: var(--grey-4);
+    font-weight: 500;
+}
+.steps .title{
+    color: var(--grey-4);
+    font-weight: 500;
+}
+
+.steps .active .title, .steps .active span{
+    font-weight: 600;
+    color: var(--dark-1);
+}
