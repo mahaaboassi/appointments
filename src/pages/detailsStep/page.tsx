@@ -41,6 +41,7 @@ const DetailsStep = () => {
     })
     const [ loading, setLoading ] = useState(false)
     useEffect(()=>{
+
         if(!values) navigate("/")
     },[])
     const { register, handleSubmit, formState: { errors } } = useForm({
@@ -180,7 +181,7 @@ const DetailsStep = () => {
         <div className="flex flex-col gap-5 items-center ">
             <h2 className="font-medium text-md md:text-xl text-center">Selected Appointment</h2>
             <div className="border rounded-xl p-2 border-[var(--yellow-2)] w-full text-center text-[var(--yellow-2)] font-bold text-lg">
-                {values?.date} at {values.time}
+                {values && values?.date} at {values && values.time}
         
             </div>
 

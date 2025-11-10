@@ -21,6 +21,8 @@ const data: Item[] = [
 
 const FirstStep = () => {
     const navigate = useNavigate()
+    const stored = localStorage.getItem("values");
+    const values = stored ? JSON.parse(stored) : null;
     const times = Array.from({length: 11}, (_, i) => `${(i+10)%12 || 12}:00 ${i+10 < 12 ? "AM" : "PM"}`)
     const [service, setService] =  useState<Item | null>(null);
     const {thisWeek, nextWeek, weekAfterNext} : { thisWeek: string[]; nextWeek: string[]; weekAfterNext:string[] } = getDays()
@@ -43,7 +45,7 @@ const FirstStep = () => {
                 ))}
             </div>
         </div>
-        { service && "id" in service && <div className="flex flex-col gap-5 items-center">
+        { (values || (service && "id" in service)) && <div className="flex flex-col gap-5 items-center">
             <h2 className="font-medium text-md md:text-xl text-center">Find an appointment</h2>
             <div className="flex flex-col gap-3 w-full ">
                 {/* This Week */}
