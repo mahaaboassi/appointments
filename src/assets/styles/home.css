@@ -35,6 +35,14 @@ abbr[title]{
     padding: 5px 0;
     height: 60px !important;
 }
+.react-calendar__viewContainer{
+    padding: 10px 25px;
+    font-size: var(--font-size-xs);
+}
+.react-calendar__tile {
+    max-width: 100%;
+    padding: 5px 3px !important;
+}
 /* For Navigation */
 .circle{
     width: 20px;
@@ -57,4 +65,22 @@ abbr[title]{
 .steps .active .title, .steps .active span{
     font-weight: 600;
     color: var(--dark-1);
+}
+
+@media (max-width:1020px) {
+    .layout{
+        padding: 0 1rem;
+    }
+    
+}
+@media (max-width: 400px) {
+    .circle{
+    width: 12px;
+    height: 12px;
+}
+}
+@media (max-width: 350px) {
+    .layout{
+        padding: 0 0.5rem;
+    }
 }

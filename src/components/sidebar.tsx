@@ -35,27 +35,29 @@ const data: Item[] = [
         </svg>},
 ]
 const Sidebar = () =>{
-    return(<aside className="flex flex-col gap-5">
-        <div className="card p-5 flex flex-col items-center gap-5">
-                <div className="flex flex-col items-center">
-                    <div>
-                        <img src={logo} alt="Qilume Logo" />
+    return(<aside className=" sticky top-6 flex flex-col gap-5 ">
+            <div className="card p-5 flex flex-col items-center gap-5 bg-[var(--light)]">
+                    <div className="flex flex-col items-center">
+                        <div>
+                            <img className="object-contain w-[200px] md:w-full" src={logo} alt="Qilume Logo" />
+                        </div>
+                        <div>
+                            <h2 className="text-sm text-center">Welcome to Qilume Appointments</h2>
+                        </div>
                     </div>
-                    <div>
-                        <h2 className="text-sm">Welcome to Qilume Appointments</h2>
-                    </div>
-                </div>
-                <div className="flex gap-2 items-center">
-                    {data.map((item, index) => (
-                        <Link key={`Icons_${index}`} to={item.link} target="_blank"  aria-label={item.label}  className="social-icon">
-                            <span className="text-white">{item.icon}</span>
-                        </Link>
-                    ))}
+                    <div className="flex gap-2 items-center">
+                        {data.map((item, index) => (
+                            <Link key={`Icons_${index}`} to={item.link} target="_blank"  aria-label={item.label}  className="social-icon">
+                                <span className="text-white">{item.icon}</span>
+                            </Link>
+                        ))}
 
-                </div>
-        </div>
-        <MyCalendar/>
-        
+                    </div>
+            </div>
+            <div className="hidden md:block">
+                <MyCalendar/>
+            </div>
+            
     </aside>)
 }   
 export default Sidebar;

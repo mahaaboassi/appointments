@@ -6,7 +6,7 @@ function MyCalendar() {
   const [date] = useState(new Date());
 
   return (
-    <div className="flex justify-center ">
+    <div className="flex justify-center bg-[var(--light)] ">
       <Calendar
         // onChange={setDate}
         value={date}
