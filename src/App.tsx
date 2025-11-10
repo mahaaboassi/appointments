@@ -2,8 +2,8 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './pages/layout'
 import FirstStep from './pages/FirstStep/page'
-import DetailsStep from './pages/confirmation/page'
 import Confirmation from './pages/confirmation/page'
+import DetailsStep from './pages/detailsStep/page'
 
 function App() {
   return (<BrowserRouter>
@@ -11,7 +11,7 @@ function App() {
       <Route path="/*" element={<Layout/>}>
         <Route index element={<FirstStep/>} />
         <Route path='details' element={<DetailsStep/>}/>
-        <Route path='confirmation' element={<Confirmation/>}  />
+        <Route path='confirmation' element={<Confirmation />}  />
       </Route>
     </Routes>
   </BrowserRouter>

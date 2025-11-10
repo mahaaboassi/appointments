@@ -41,7 +41,7 @@ const DetailsStep = () => {
     })
     const [ loading, setLoading ] = useState(false)
     useEffect(()=>{
-        if(!localStorage.getItem("values")) navigate("/")
+        if(!values) navigate("/")
     },[])
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(validationSchema),
