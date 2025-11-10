@@ -178,7 +178,7 @@ const DetailsStep = () => {
     }
     return (<div className="flex flex-col gap-10 ">
         <div className="flex flex-col gap-5 items-center ">
-            <h2 className="font-medium text-xl">Selected Appointment</h2>
+            <h2 className="font-medium text-md md:text-xl text-center">Selected Appointment</h2>
             <div className="border rounded-xl p-2 border-[var(--yellow-2)] w-full text-center text-[var(--yellow-2)] font-bold text-lg">
                 {values?.date} at {values.time}
         
@@ -186,7 +186,7 @@ const DetailsStep = () => {
 
         </div>
         <div className="flex flex-col gap-5 items-center w-full">
-            <h2 className="font-medium text-xl text-center">Please enter your details</h2>
+            <h2 className="font-medium text-md md:text-xl text-center">Please enter your details</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="w-full flex flex-col gap-3">
                 <div className="grid sm:grid-cols-2 gap-3">
                     <div className="flex flex-col gap-1">
@@ -214,12 +214,12 @@ const DetailsStep = () => {
                 </div>
                 <div className="grid sm:grid-cols-2 gap-3">
                     <div className="flex flex-col gap-1">
-                        <label>Service:<span className="required">*</span></label>
+                        <label>Service:</label>
                         <input {...register("service")} type="text" placeholder={"Service"}  />
                         {errors.service && <p className="pt-0.5 text-error">{errors.service.message}</p>}
                     </div>
                     <div className="flex flex-col gap-1">
-                        <label>Address:<span className="required">*</span></label>
+                        <label>Address:</label>
                         <input {...register("address")} type="text" placeholder={"Address"}  />
                         {errors.address && <p className="pt-0.5 text-error">{errors.address.message}</p>}
                     </div>

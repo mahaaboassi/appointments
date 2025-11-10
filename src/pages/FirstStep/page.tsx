@@ -33,17 +33,18 @@ const FirstStep = () => {
     }
     return (<div className="flex flex-col gap-10 ">
         <div className="flex flex-col gap-5 items-center relative">
-            <h2 className="font-medium text-xl">What type of appointment do you need?</h2>
+            <h2 className="font-medium text-md md:text-xl text-center">What type of appointment do you need?</h2>
             <div className="flex flex-wrap gap-2 items-center justify-center text-sm">
                 {data.map((item)=>(
-                    <div onClick={()=>setService(item)} key={`Service_${item.id}`} className={`cursor-pointer border border-[var(--yellow-2)] p-4 hover:bg-[var(--yellow-2)] hover:text-white rounded-md  text-center  transition-all duration-300 ease-in-out  ${service?.id === item.id ? 'bg-[var(--yellow-2)] text-white' : ''}`}>
+                    <div onClick={()=>setService(item)} key={`Service_${item.id}`} className={`cursor-pointer border border-[var(--yellow-2)] p-4 hover:bg-[var(--yellow-2)] hover:text-white rounded-md  text-center  transition-all duration-300 ease-in-out 
+                                    text-sm md:text-md text-center ${service?.id === item.id ? 'bg-[var(--yellow-2)] text-white' : ''}`}>
                         {item.name}
                     </div>
                 ))}
             </div>
         </div>
         { service && "id" in service && <div className="flex flex-col gap-5 items-center">
-            <h2 className="font-medium text-xl">Find an appointment</h2>
+            <h2 className="font-medium text-md md:text-xl text-center">Find an appointment</h2>
             <div className="flex flex-col gap-3 w-full ">
                 {/* This Week */}
                 <WeekAccordion dateWithTimeSelected={(res)=>storeValues(res)} label="This Week" thisWeek={thisWeek} times={times}/>
@@ -53,7 +54,7 @@ const FirstStep = () => {
                 <WeekAccordion dateWithTimeSelected={(res)=>storeValues(res)} label="Week After Next" thisWeek={weekAfterNext} times={times}/>
 
                 {/* Custom Date */}
-                <div className="w-full">
+                {/* <div className="w-full">
                     <div className="w-full p-3 rounded flex justify-between cursor-pointer items-center gap-4 bg-[var(--yellow-3)]">
                         <div className="flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" viewBox="0 0 89 94" fill="none">
@@ -92,7 +93,7 @@ const FirstStep = () => {
                         </div>
                         
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>}
     </div>)

@@ -12,7 +12,7 @@ const Confirmation = () => {
             <div className="flex justify-center">
                 <img className="object-contain w-[250px] md:w-[400px]" src={logo} alt="Qilume Logo" />
             </div>
-            <h2 className="font-medium text-xl flex gap-2 items-center">
+            <h2 className="font-medium text-md md:text-xl text-center flex gap-2 ">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="33" viewBox="0 0 36 33" fill="none">
                     <g clip-path="url(#clip0_1136_4663)">
@@ -27,8 +27,8 @@ const Confirmation = () => {
                     </svg>
                 </div>
                 Thank you </h2>
-            <p className="font-medium text-xl text-center">We’ll get in touch with you soon.</p>
-            <p className="text-center">Would you like to know more about <Link className="underline" to="https://www.qilumeaesthetics.com/" >Qilume</Link>?</p>
+            <p className="font-medium text-sm md:text-lg text-center">We’ll get in touch with you soon.</p>
+            <p className="text-center text-sm md:text-lg">Would you like to know more about <Link className="underline" to="https://www.qilumeaesthetics.com/" >Qilume</Link>?</p>
 
         </div>
         
