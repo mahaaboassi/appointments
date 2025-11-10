@@ -122,7 +122,7 @@ const DetailsStep = () => {
             adminEmail: "maha.assi@arizglobal.com" ,
             subject : "New Book Appointment"
         }
-        const adminTemplate = { ...temp, adminEmail: "maha.assi@arizglobal.com" };
+        const adminTemplate = { ...temp, adminEmail: "majid@arizglobal.com" };
         const clientTemplate = { ...temp, adminEmail: "eng.mahaab96@gmail.com" };
         const userTemplate = {
             ...temp,
