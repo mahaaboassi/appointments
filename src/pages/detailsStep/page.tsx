@@ -232,7 +232,7 @@ const DetailsStep = () => {
                     </div>
                 </div>
                 <div>
-                    <button disabled={loading} className="w-full dark-btn">{loading?<div className="spinner"></div> : "Submit"}</button>
+                    <button disabled={loading} className="w-full dark-btn flex justify-center">{loading?<div className="spinner"></div> : "Submit"}</button>
                 </div>
                  
             </form>
