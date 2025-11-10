@@ -67,7 +67,7 @@ const DetailsStep = () => {
                     <!-- Body Content -->
                     <div style="padding: 20px;">
                         <h1 style="text-align: center; color: #C3996B; margin-bottom: 0;">Book an Appointment</h1>
-                        <p>Dear Qilume Team,</p>
+                        <p>Dear Team,</p>
                         <p>Someone has booked an appointment for Qilume Clinic. Here are the details:</p>
                         <p style="padding:10px;border:1px solid green; border-radius: 8px; text-align:center" >
                             Date Selected: ${values?.date } at ${values?.time}
