@@ -37,7 +37,7 @@ const FirstStep = () => {
             <div className="flex flex-wrap gap-2 items-center justify-center text-sm">
                 {data.map((item)=>(
                     <div onClick={()=>setService(item)} key={`Service_${item.id}`} className={`cursor-pointer border border-[var(--yellow-2)] p-4 hover:bg-[var(--yellow-2)] hover:text-white rounded-md  text-center  transition-all duration-300 ease-in-out 
-                                    text-sm md:text-md text-center ${service?.id === item.id ? 'bg-[var(--yellow-2)] text-white' : ''}`}>
+                                    text-[10px] md:text-sm  text-center ${service?.id === item.id ? 'bg-[var(--yellow-2)] text-white' : ''}`}>
                         {item.name}
                     </div>
                 ))}
